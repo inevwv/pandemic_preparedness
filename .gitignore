@@ -1,0 +1,74 @@
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# R Environment Variables
+.Renviron
+
+# pkgdown site
+docs/
+
+# translation temp files
+po/*~
+
+# RStudio Connect folder
+rsconnect/
+
+# Ignore CSV, TSV, and other data file types (if they’re not tracked)
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# Ignore compressed or archived files
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Ignore any Mac system files
+.DS_Store
+
+# Ignore raw data and large data files
+data_sources/
+working_data/
+to delete/
+cleaned_poultry/
