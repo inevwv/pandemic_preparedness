@@ -16,6 +16,4 @@ This project evaluates pandemic preparedness using a combination of quantitative
 - **Incidence of SARS and Avian Flu:** Tracks historical pandemic responses.
 - **Reported Avian Flu in Animals:** Monitors zoonotic transmission patterns.
 
----
-
-## 📚 **Folder Structure**
+## UNDER CONSTRUCTION
