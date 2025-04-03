@@ -1,7 +1,9 @@
 # REFINE THE POULTRY
-library(readr)
-library(purrr)
-library(dplyr)
+install_and_load(
+  "readr",
+  "purrr",
+  "dplyr"
+)
 
 # Define valid product codes as character to preserve leading zeros
 poultry_codes <- c(

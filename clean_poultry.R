@@ -1,5 +1,7 @@
-library(dplyr)
-library(here)
+install_and_load(
+  "dplyr",
+  "here"
+)
 
 # Function to clean and process the data
 clean_and_process_data <- function(input_file, iso_map, country_num_of_interest) {

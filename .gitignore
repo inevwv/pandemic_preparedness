@@ -53,6 +53,8 @@ rsconnect/
 *.tsv
 *.xlsx
 *.xls
+*.docx
+*.doc
 
 # Ignore compressed or archived files
 *.zip
