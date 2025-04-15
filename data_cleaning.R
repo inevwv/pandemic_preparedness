@@ -23,15 +23,15 @@ colnames(poultry_prod)[colnames(poultry_prod) == "Meat..poultry...00001808....Pr
 
 
 # Clean and subset the data
-gdp_subset <- subset(gdp_data, Country.Code %in% countries_of_interest)[, c("Country.Name", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
-health_exp_subset <- subset(health_expenditure, Country.Code %in% countries_of_interest)[, c("Country.Name", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
-hosp_beds_subset <- subset(hospital_beds, Country.Code %in% countries_of_interest)[, c("Country.Name", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
-exp_gdp_ratio_subset <- subset(exp_gdp_ratio, Country.Code %in% countries_of_interest)[, c("Country.Name", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
+gdp_subset <- subset(gdp_data, Country.Code %in% countries_of_interest)[, c("Country.Name", "Country.Code", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
+health_exp_subset <- subset(health_expenditure, Country.Code %in% countries_of_interest)[, c("Country.Name", "Country.Code", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
+hosp_beds_subset <- subset(hospital_beds, Country.Code %in% countries_of_interest)[, c("Country.Name", "Country.Code", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
+exp_gdp_ratio_subset <- subset(exp_gdp_ratio, Country.Code %in% countries_of_interest)[, c("Country.Name", "Country.Code", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
 poultry_prod_subset <- subset(poultry_prod, Country.Code %in% countries_of_interest & Year %in% 2004:2010)
-physicians_subset <- subset(physicians, Country.Code %in% countries_of_interest)[, c("Country.Name", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
+physicians_subset <- subset(physicians, Country.Code %in% countries_of_interest)[, c("Country.Name", "Country.Code", "X2004", "X2005", "X2006", "X2007", "X2008", "X2009", "X2010")]
 H5N1_incidence_subset <- H5N1_incidence %>%
   subset(Country.Code %in% countries_of_interest & Year %in% 2004:2010) %>%
-  group_by(Country.Name, Year) %>%
+  group_by(Country.Name, Country.Code, Year) %>%
   summarise(Total.Cases = sum(Human.Cases, na.rm = TRUE))
 
 if (!dir.exists("working_data")) {
