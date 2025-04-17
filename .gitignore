@@ -71,6 +71,5 @@ rsconnect/
 
 # Ignore raw data and large data files
 data_sources/
-working_data/
 to delete/
 cleaned_poultry/

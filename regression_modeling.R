@@ -96,7 +96,6 @@ print(correlation_results)
 regression_model <- lm(Total.Cases ~ exp_gdp_ratio_z + gdp_z + health_exp_z + hosp_beds_z + physicians_z + poultry_prod_z + reporting_scores_z + testing_access_z, data = merged_data_z)
 
 # Summary of the regression model
-summary(regression_model) 
 
 # 7. Create and export predictors_zscores.csv for use in optimization
 predictors_zscores <- merged_data_z %>%
@@ -110,3 +109,4 @@ predictors_zscores_monthly <- predictors_zscores %>%
 # Save the monthly version
 write_csv(predictors_zscores_monthly, "working_data/predictors_zscores.csv")
 
+summary(regression_model)
