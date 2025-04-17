@@ -97,3 +97,16 @@ regression_model <- lm(Total.Cases ~ exp_gdp_ratio_z + gdp_z + health_exp_z + ho
 
 # Summary of the regression model
 summary(regression_model) 
+
+# 7. Create and export predictors_zscores.csv for use in optimization
+predictors_zscores <- merged_data_z %>%
+  select(Country.Code, Year, all_of(paste0(predictor_columns, "_z"))) %>%
+  drop_na()
+
+# Expand predictors to monthly for joining with monthly case data
+predictors_zscores_monthly <- predictors_zscores %>%
+  crossing(Month = 1:12)
+
+# Save the monthly version
+write_csv(predictors_zscores_monthly, "working_data/predictors_zscores.csv")
+
